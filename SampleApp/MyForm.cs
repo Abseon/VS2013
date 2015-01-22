@@ -42,17 +42,19 @@ namespace SampleApp
             for (int i = 0; i < entries; i++)
             {
                 Label name = new Label();
+                Label name2 = new Label();
                 Label address = new Label();
                 Label num = new Label();
                 Label date = new Label();
                 name.Text = myData[i].name;
+                name2.Text = myData[i].name;
                 address.Text = myData[i].address;
                 num.Text = myData[i].phoneNumber.ToString();
                 date.Text = myData[i].startDate.AddDays(7).ToLongDateString();
                 viewTable.Controls.Add(name);
                 viewTable.Controls.Add(address);
                 viewTable.Controls.Add(num);
-                scheduleTable.Controls.Add(name);
+                scheduleTable.Controls.Add(name2);
                 scheduleTable.Controls.Add(date);
             }
         }
@@ -77,17 +79,19 @@ namespace SampleApp
             {
                 myData[entries] = new DataEntry(firstNameBox.Text, addressBox.Text, Convert.ToInt32(homeNumberBox.Text),leaveStart.Value);
                 Label name = new Label();
+                Label name2 = new Label();
                 Label address = new Label();
                 Label num = new Label();
                 Label date = new Label();
                 name.Text = myData[entries].name;
+                name2.Text = myData[entries].name;
                 address.Text = myData[entries].address;
                 num.Text = myData[entries].phoneNumber.ToString();
                 date.Text = myData[entries].startDate.AddDays(7).ToLongDateString();
                 viewTable.Controls.Add(name);
                 viewTable.Controls.Add(address);
                 viewTable.Controls.Add(num);
-                scheduleTable.Controls.Add(name);
+                scheduleTable.Controls.Add(name2);
                 scheduleTable.Controls.Add(date);
                 entries++;
             }
